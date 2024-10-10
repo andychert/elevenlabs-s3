@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "elevenlabs-s3"
-version = "0.1.0"
+version = "0.2.0"
 description = "A package that combines ElevenLabs TTS and AWS S3 upload."
 authors = ["Andy <andychert@protonmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.10,<4.0"
 elevenlabs = "^1.9.0"
 boto3 = "^1.35.36"
 requests = "^2.32.3"
