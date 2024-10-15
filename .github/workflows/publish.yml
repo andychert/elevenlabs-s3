@@ -28,6 +28,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
 
+      # Regenerate lock file if necessary
+      - name: Ensure lockfile is up to date
+        run: |
+          if ! poetry lock --check; then
+            poetry lock --no-update
+          fi
+
       # Install dependencies
       - name: Install dependencies
         run: poetry install
