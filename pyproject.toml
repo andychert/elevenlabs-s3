@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "elevenlabs-s3"
-version = "0.2.0"
+version = "0.3.0"
 description = "A package that combines ElevenLabs TTS and AWS S3 upload."
 authors = ["Andy <andychert@protonmail.com>"]
 readme = "README.md"

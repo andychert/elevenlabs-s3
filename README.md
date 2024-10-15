@@ -17,20 +17,30 @@ from elevenlabs_s3 import VoiceSettings, text_to_speech
 result = text_to_speech(
     text="Hello, this is a test.",
     elevenlabs_api_key="YOUR_ELEVENLABS_API_KEY",
-    output_folder="audio_files", # Specify if you want to save locally
-    aws_s3_bucket_name="your-s3-bucket", # Specify if you want to upload to S3
+    voice_id="YOUR_VOICE_ID"
+    output_folder="local_files", # Specify if you want to save locally
+    # Specify if you want to upload to S3
+    aws_s3_output_folder="s3_files",
+    aws_s3_bucket_name="your-s3-bucket",
     aws_access_key_id="YOUR_AWS_ACCESS_KEY_ID",
     aws_secret_access_key="YOUR_AWS_SECRET_ACCESS_KEY",
     aws_region_name="YOUR_AWS_REGION",
-    voice_id="YOUR_VOICE_ID",
-    voice_settings=VoiceSettings(
-        stability=0.1,
-        similarity_boost=0.3,
-        style=0.2,
-    )
 )
 
 print(result)
+
+"""
+Elevenlabs ID: `I8xNqL3yp2LqoGrqUdyV`
+Example: `previous_request_ids=["I8xNqL3yp2LqoGrqUdyV"]`
+
+{
+   "id": "I8xNqL3yp2LqoGrqUdyV",
+   "file_name":"local_files/I8xNqL3yp2LqoGrqUdyV.mp3",
+   "s3_file_name":"s3_files/I8xNqL3yp2LqoGrqUdyV.mp3",
+   "s3_bucket_name":"mybucket",
+   "s3_presigned_url":"https://mybucket.s3.amazonaws.com/I8xNqL3yp2LqoGrqUdyV.mp3?AWSAccessKeyId=AKIAVY2PHBT7JH2FX7K2&Signature=DGDRWa6GJeTXIyhihW%2BOEymTTpo%3D&Expires=1728922077"
+}
+"""
 
 ```
 
