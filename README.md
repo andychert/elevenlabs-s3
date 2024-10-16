@@ -17,7 +17,7 @@ from elevenlabs_s3 import VoiceSettings, text_to_speech
 result = text_to_speech(
     text="Hello, this is a test.",
     elevenlabs_api_key="YOUR_ELEVENLABS_API_KEY",
-    voice_id="YOUR_VOICE_ID"
+    voice_id="YOUR_VOICE_ID",
     output_folder="local_files", # Specify if you want to save locally
     # Specify if you want to upload to S3
     aws_s3_output_folder="s3_files",
@@ -31,14 +31,14 @@ print(result)
 
 """
 Elevenlabs ID: `I8xNqL3yp2LqoGrqUdyV`
-Example: `previous_request_ids=["I8xNqL3yp2LqoGrqUdyV"]`
+Usage: `previous_request_ids=["I8xNqL3yp2LqoGrqUdyV"]`
 
 {
-   "id": "I8xNqL3yp2LqoGrqUdyV",
-   "file_name":"local_files/I8xNqL3yp2LqoGrqUdyV.mp3",
-   "s3_file_name":"s3_files/I8xNqL3yp2LqoGrqUdyV.mp3",
-   "s3_bucket_name":"mybucket",
-   "s3_presigned_url":"https://mybucket.s3.amazonaws.com/I8xNqL3yp2LqoGrqUdyV.mp3?AWSAccessKeyId=AKIAVY2PHBT7JH2FX7K2&Signature=DGDRWa6GJeTXIyhihW%2BOEymTTpo%3D&Expires=1728922077"
+    "id": "elevenlabs-id",
+    "file_name": "audio_files/elevenlabs-id.mp3",
+    "s3_file_name": "s3_files/elevenlabs-id.mp3",
+    "s3_bucket_name": "test-bucket",
+    "s3_presigned_url": "https://test-bucket.s3.amazonaws.com/s3_files/elevenlabs-id.mp3"
 }
 """
 
