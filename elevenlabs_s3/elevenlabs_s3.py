@@ -151,7 +151,7 @@ def text_to_speech(
         raise ValueError("ELEVENLABS_API_KEY not provided and not set in environment variables.")
 
     # Ensure required parameters are present
-    for param in ["text", "voice_id", "model_id"]:
+    for param in ["text", "voice_id"]:
         if param not in kwargs:
             raise ValueError(f"Missing required parameter: {param}")
 
